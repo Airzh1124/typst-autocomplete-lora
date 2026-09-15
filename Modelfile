@@ -1,0 +1,10 @@
+FROM qwen2.5-coder:7b-base
+ADAPTER ./artifacts/qlora-7b/typst-adapter-f16.gguf
+
+PARAMETER temperature 0
+PARAMETER num_predict 128
+PARAMETER stop <|fim_prefix|>
+PARAMETER stop <|fim_suffix|>
+PARAMETER stop <|fim_middle|>
+PARAMETER stop <|endoftext|>
+PARAMETER stop <|fim_pad|>

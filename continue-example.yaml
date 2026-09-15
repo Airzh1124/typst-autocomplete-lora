@@ -1,0 +1,27 @@
+name: Typst Autocomplete LoRA
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen Typst Autocomplete 7B
+    provider: ollama
+    model: qwen2.5-coder-typst:7b
+    roles:
+      - autocomplete
+    defaultCompletionOptions:
+      temperature: 0
+      maxTokens: 128
+      keepAlive: 1800
+      stop:
+        - "<|fim_prefix|>"
+        - "<|fim_suffix|>"
+        - "<|fim_middle|>"
+        - "<|endoftext|>"
+        - "<|fim_pad|>"
+    autocompleteOptions:
+      template: "<|fim_prefix|>{{{prefix}}}<|fim_suffix|>{{{suffix}}}<|fim_middle|>"
+      maxPromptTokens: 2048
+      debounceDelay: 150
+      maxSuffixPercentage: 0.2
+      prefixPercentage: 0.6
+      onlyMyCode: true
