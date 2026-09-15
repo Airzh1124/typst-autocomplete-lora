@@ -1,4 +1,4 @@
-name: Typst Autocomplete LoRA
+name: Main Config
 version: 1.0.0
 schema: v1
 
@@ -10,7 +10,7 @@ models:
       - autocomplete
     defaultCompletionOptions:
       temperature: 0
-      maxTokens: 128
+      maxTokens: 96
       keepAlive: 1800
       stop:
         - "<|fim_prefix|>"
@@ -21,7 +21,9 @@ models:
     autocompleteOptions:
       template: "<|fim_prefix|>{{{prefix}}}<|fim_suffix|>{{{suffix}}}<|fim_middle|>"
       maxPromptTokens: 2048
-      debounceDelay: 150
+      debounceDelay: 300
       maxSuffixPercentage: 0.2
       prefixPercentage: 0.6
-      onlyMyCode: true
+      onlyMyCode: false
+      useCache: true
+      useImports: true
