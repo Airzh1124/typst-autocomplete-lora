@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environments
+.direnv/
+.venv/
+.env
+.env.*
+.envrc
+
+# Data and model artifacts
+data/*
+!data/.gitkeep
+artifacts/
+downloads/
+models/
+private_eval/
+checkpoints/
+outputs/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+
+# Logs and local caches
+*.log
+.wandb/
+.cache/
+.cache-huggingface/
+
+# Local planning
+PLAN.md
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store

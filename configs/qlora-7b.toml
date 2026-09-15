@@ -1,0 +1,22 @@
+[model]
+path = "models/Qwen2.5-Coder-7B"
+id = "Qwen/Qwen2.5-Coder-7B"
+revision = "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.05
+
+[data]
+train = "data/fim/train.jsonl"
+validation = "data/fim/validation.jsonl"
+max_sequence_length = 2048
+
+[training]
+output_dir = "artifacts/qlora-7b"
+epochs = 2
+gradient_accumulation_steps = 16
+learning_rate = 0.0002
+warmup_steps = 50
+eval_steps = 100
+logging_steps = 10
+seed = 3407
