@@ -1,0 +1,4 @@
+# CUDA 12.4 Linux wheel; install only on the GPU server.
+--only-binary=:all:
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
+llama-cpp-python==0.3.35
